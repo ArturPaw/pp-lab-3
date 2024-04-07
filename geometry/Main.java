@@ -1,15 +1,8 @@
-package geometry;
+Point point1 = new Point(1.0, 2.5);
+System.out.println(point1.toString()); // Wyświetli: "(1.0, 2.5)"
 
-public class Main {
+point1.setX(3.14);
+point1.setY(6.28);
 
-    public static void main(String[] args) {
-        Point center = new Point(2.5, 3.14);
-        Circle circle = new Circle(center, 5.0);
-
-        System.out.println("Właściwości koła:");
-        System.out.println("Środek: (" + circle.getCenter().getX() + ", " + circle.getCenter().getY() + ")");
-        System.out.println("Promień: " + circle.getRadius());
-        System.out.println("Obwód: " + circle.calculatePerimeter());
-        System.out.println("Pole powierzchni: " + circle.getArea());
-    }
-}
+System.out.println("Współrzędne x: " + point1.getX()); // Wyświetli: 3.14
+System.out.println("Współrzędne y: " + point1.getY()); // Wyświetli: 6.28
