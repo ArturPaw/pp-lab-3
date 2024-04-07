@@ -4,14 +4,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Point punkt = new Point(5.5, 10.2);
-        ColoredCircle kolo = new ColoredCircle(punkt, 4.7, "Czerwony");
+        Circle[] circles = new Circle[3];
 
-        System.out.println("Właściwości koła:");
-        System.out.println("Środek: (" + kolo.getCenter().getX() + ", " + kolo.getCenter().getY() + ")");
-        System.out.println("Promień: " + kolo.getRadius());
-        System.out.println("Kolor: " + kolo.getColor());
-        System.out.println("Obwód: " + kolo.calculatePerimeter());
-        System.out.println("Pole powierzchni: " + kolo.getArea());
+        circles[0] = new Circle(new Point(1.0, 2.0), 3.0);
+        circles[1] = new ColoredCircle(new Point(4.0, 5.0), 6.0, "Niebieski");
+        circles[2] = new Circle(new Point(7.0, 8.0), 9.0);
+
+        for (Circle circle : circles) {
+            System.out.println("Pole powierzchni: " + circle.calculateArea());
+            if (circle instanceof ColoredCircle) {
+                ColoredCircle coloredCircle = (ColoredCircle) circle;
+                System.out.println("Kolor: " + coloredCircle.getColor());
+            }
+        }
     }
 }

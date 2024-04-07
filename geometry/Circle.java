@@ -25,4 +25,9 @@ public class Circle{
     public double getArea() {
         return Math.PI * radius * radius;
     }
+
+    public String calculateArea() {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'calculateArea'");
+    }
 }
