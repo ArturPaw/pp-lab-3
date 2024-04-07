@@ -3,13 +3,15 @@ package geometry;
 public class Main {
 
     public static void main(String[] args) {
-        Point center = new Point(2.5, 3.14);
-        Circle circle = new Circle(center, 5.0);
+
+        Point punkt = new Point(5.5, 10.2);
+        ColoredCircle kolo = new ColoredCircle(punkt, 4.7, "Czerwony");
 
         System.out.println("Właściwości koła:");
-        System.out.println("Środek: (" + circle.getCenter().getX() + ", " + circle.getCenter().getY() + ")");
-        System.out.println("Promień: " + circle.getRadius());
-        System.out.println("Obwód: " + circle.calculatePerimeter());
-        System.out.println("Pole powierzchni: " + circle.getArea());
+        System.out.println("Środek: (" + kolo.getCenter().getX() + ", " + kolo.getCenter().getY() + ")");
+        System.out.println("Promień: " + kolo.getRadius());
+        System.out.println("Kolor: " + kolo.getColor());
+        System.out.println("Obwód: " + kolo.calculatePerimeter());
+        System.out.println("Pole powierzchni: " + kolo.getArea());
     }
 }
